@@ -46,8 +46,10 @@ void draw() {
     noStroke();
     fill(0, 10);
     rect(0, 0, width, height);
+    hint(DISABLE_DEPTH_TEST);
   } else {
     background(0);
+    hint(ENABLE_DEPTH_TEST);
   }
   ambientLight(128, 128, 128);
   directionalLight(255, 255, 255, 1, 0, -1);
@@ -55,7 +57,6 @@ void draw() {
   lightSpecular(0, 0, 0);
   if (blendModeAdd) blendMode(ADD);
   else blendMode(BLEND);
-  hint(ENABLE_DEPTH_TEST);
   pushMatrix();
   vibrations();
 
