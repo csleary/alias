@@ -1,4 +1,4 @@
-import themidibus.*; //<>//
+import themidibus.*;
 
 // MIDI
 MidiBus Loopback;
@@ -16,9 +16,9 @@ boolean blendModeAdd, cubeFlash, testFade, grid, globalFade;
 
 void setup() {
   //size(1280, 720, P3D); // Use if 'fullScreen' is disabled.
-    fullScreen(P3D, 2); // Use fullScreen(2); for secondary display.
-    noCursor(); // Disable cursor when full screen.
-  //  pixelDensity(2); // For Mac Retina.
+  fullScreen(P3D, 2); // Use fullScreen(2); for secondary display.
+  noCursor(); // Disable cursor when full screen.
+  // pixelDensity(2); // For Mac Retina.
   smooth(8);
   frameRate(60);
   cols = (w / scl) + 1;
@@ -65,7 +65,7 @@ void draw() {
     grid();
     if (diamondLeftOn) diamondLeft();
     if (diamondRightOn) diamondRight();
-    if (sphereOn) { 
+    if (sphereOn) {
       mySphere();
       if (explode) {
         hint(DISABLE_DEPTH_MASK);
